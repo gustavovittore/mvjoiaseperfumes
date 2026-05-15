@@ -520,6 +520,18 @@ function ReferenceFounders() {
               Muito mais que joias.
             </p>
             <ReferenceDivider dark />
+            <div className="mb-8 lg:hidden">
+              <div className="relative mx-auto w-full max-w-[560px] rounded-[28px] border border-[#D1AF66]/75 p-3">
+                <div className="relative aspect-[0.78/1] overflow-hidden rounded-[22px]">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={brand.founders}
+                    alt="Vanessa Pereira e Maristela Amorim, sócias da MV Jóias & Perfumes"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
             <div className="max-w-[44rem] space-y-6 text-[1.13rem] leading-9 text-white/78 sm:text-[1.24rem] sm:leading-10">
               <p>
                 Antes da MV existir, existia um propósito compartilhado por duas mulheres:
@@ -543,7 +555,7 @@ function ReferenceFounders() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-[560px] rounded-[28px] border border-[#D1AF66]/75 p-3">
+          <div className="relative mx-auto hidden w-full max-w-[560px] rounded-[28px] border border-[#D1AF66]/75 p-3 lg:block">
             <div className="relative aspect-[0.78/1] overflow-hidden rounded-[22px]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -824,7 +836,7 @@ export default function Home() {
                 alt="MV Jóias & Perfumes"
                 fill
                 priority
-                className="origin-left -translate-x-8 scale-[1.46] object-contain object-left sm:translate-x-0 sm:scale-100 lg:-translate-x-16 lg:scale-[1.18]"
+                className="origin-left scale-[1.46] object-contain object-left sm:scale-100 lg:-translate-x-16 lg:scale-[1.18]"
                 sizes="(max-width: 640px) 320px, 450px"
               />
             </a>
