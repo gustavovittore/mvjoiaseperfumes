@@ -304,6 +304,7 @@ function ReferenceLightSection({
   cta,
   imageSide = "right",
   imageClass = "",
+  mobileProductLayout = false,
 }: {
   id?: string;
   label: string;
@@ -316,6 +317,7 @@ function ReferenceLightSection({
   cta?: string;
   imageSide?: "left" | "right";
   imageClass?: string;
+  mobileProductLayout?: boolean;
 }) {
   const imageFirst = imageSide === "left";
   const titleParts = italicWord ? title.split(italicWord) : [title];
@@ -337,6 +339,15 @@ function ReferenceLightSection({
               {titleParts[1] ?? null}
             </h2>
             <ReferenceDivider />
+            {mobileProductLayout ? (
+              <div className="mb-8 lg:hidden">
+                <FloatingProduct
+                  src={image}
+                  alt={imageAlt}
+                  className={`aspect-[0.92/1] max-w-[820px] ${imageClass}`}
+                />
+              </div>
+            ) : null}
             <div className="max-w-full space-y-6 text-[1.13rem] leading-9 text-[#31404A] sm:max-w-[42rem] sm:text-[1.24rem] sm:leading-10">
               <p>{text}</p>
               {complement ? <p>{complement}</p> : null}
@@ -348,7 +359,7 @@ function ReferenceLightSection({
             ) : null}
           </div>
 
-          <div className={`min-w-0 ${imageFirst ? "lg:col-start-1 lg:row-start-1" : ""}`}>
+          <div className={`min-w-0 ${mobileProductLayout ? "hidden lg:block" : ""} ${imageFirst ? "lg:col-start-1 lg:row-start-1" : ""}`}>
             <FloatingProduct
               src={image}
               alt={imageAlt}
@@ -439,6 +450,13 @@ function ReferenceBags() {
               <span className="italic text-[#9A783E]">presença.</span>
             </h2>
             <ReferenceDivider />
+            <div className="mb-8 lg:hidden">
+              <FloatingProduct
+                src={brand.bags}
+                alt="Bolsas premium selecionadas pela MV Jóias & Perfumes"
+                className="aspect-[1.18/0.84] max-w-[1220px] scale-[1.58] sm:scale-[1.08] lg:translate-x-12 lg:scale-[1.42] xl:scale-[1.5]"
+              />
+            </div>
             <div className="max-w-[39rem] space-y-6 text-[1.13rem] leading-9 text-[#31404A] sm:text-[1.24rem] sm:leading-10">
               <p>Bolsas selecionadas para mulheres que valorizam sofisticação, estilo refinado e detalhes que elevam sua imagem.</p>
               <p>Mais do que um acessório, a bolsa certa comunica presença, bom gosto e intenção. Cada escolha revela uma mulher que entende o valor dos detalhes.</p>
@@ -448,7 +466,7 @@ function ReferenceBags() {
             </div>
           </div>
 
-          <div className="min-w-0">
+          <div className="hidden min-w-0 lg:block">
             <FloatingProduct
               src={brand.bags}
               alt="Bolsas premium selecionadas pela MV Jóias & Perfumes"
@@ -799,14 +817,14 @@ export default function Home() {
           <div className="flex shrink-0 flex-col items-start">
             <a
               href="#inicio"
-              className="relative h-52 w-[24rem] max-w-[calc(100vw-2.5rem)] shrink-0 overflow-hidden sm:h-44 sm:w-[22rem] sm:max-w-full lg:h-[15.75rem] lg:w-[450px]"
+              className="relative h-60 w-[28rem] max-w-[calc(100vw-2rem)] shrink-0 overflow-hidden sm:h-44 sm:w-[22rem] sm:max-w-full lg:h-[15.75rem] lg:w-[450px]"
             >
               <Image
                 src={brand.logo}
                 alt="MV Jóias & Perfumes"
                 fill
                 priority
-                className="origin-left scale-[1.18] object-contain object-left sm:scale-100 lg:-translate-x-16 lg:scale-[1.18]"
+                className="origin-left -translate-x-8 scale-[1.46] object-contain object-left sm:translate-x-0 sm:scale-100 lg:-translate-x-16 lg:scale-[1.18]"
                 sizes="(max-width: 640px) 320px, 450px"
               />
             </a>
@@ -922,6 +940,7 @@ export default function Home() {
         cta="Conhecer Joias"
         imageSide="left"
         imageClass="scale-[1.32] sm:scale-100 lg:max-w-[900px] lg:scale-[1.1]"
+        mobileProductLayout
       />
 
       <ReferenceLightSection
@@ -935,6 +954,7 @@ export default function Home() {
         cta="Conhecer Perfumes"
         imageSide="right"
         imageClass="-translate-x-5 scale-[1.32] sm:translate-x-0 sm:scale-100 lg:max-w-[880px] lg:scale-[1.09]"
+        mobileProductLayout
       />
 
       <ReferenceExperience />
@@ -952,6 +972,7 @@ export default function Home() {
         cta="Conhecer Relógios"
         imageSide="left"
         imageClass="-translate-x-5 scale-[1.3] sm:translate-x-0 sm:scale-100 lg:max-w-[860px] lg:scale-[1.08]"
+        mobileProductLayout
       />
 
       <ReferenceFounders />
