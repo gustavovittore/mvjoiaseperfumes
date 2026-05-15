@@ -396,7 +396,7 @@ function ReferenceExperience() {
               key={item.number}
               className="grid gap-5 border-b border-[#D1AF66]/34 py-9 last:border-b-0 sm:grid-cols-[92px_46px_1fr] sm:gap-7 lg:py-10"
             >
-              <span className="font-serif text-[3.3rem] font-light leading-none text-[#D1AF66] sm:text-[4rem]">
+              <span className="font-serif text-[2.35rem] font-light leading-none text-[#D1AF66] sm:text-[4rem]">
                 {item.number}
               </span>
               <span className="relative hidden min-h-32 justify-center sm:flex">
@@ -409,7 +409,7 @@ function ReferenceExperience() {
                     src={item.icon}
                     alt={item.iconAlt}
                     size={56}
-                    className={`h-9 w-9 sm:h-12 sm:w-12 ${item.iconClass ?? ""}`}
+                    className={`h-11 w-11 sm:h-12 sm:w-12 ${item.iconClass ?? ""}`}
                   />
                   <span>{item.title}</span>
                 </h3>
@@ -452,7 +452,7 @@ function ReferenceBags() {
             <FloatingProduct
               src={brand.bags}
               alt="Bolsas premium selecionadas pela MV Jóias & Perfumes"
-              className="aspect-[1.18/0.84] max-w-[1220px] scale-[1.08] lg:translate-x-12 lg:scale-[1.42] xl:scale-[1.5]"
+              className="aspect-[1.18/0.84] max-w-[1220px] scale-[1.24] sm:scale-[1.08] lg:translate-x-12 lg:scale-[1.42] xl:scale-[1.5]"
             />
           </div>
         </div>
@@ -698,7 +698,7 @@ function ReferenceFooter() {
           </div>
 
           <div className="w-full min-w-0 max-w-[27rem] px-3 text-left lg:px-4">
-            <div className="w-fit">
+            <div className="mx-auto w-fit lg:mx-0">
               <p className="text-center text-sm font-semibold uppercase tracking-[0.42em] text-[#D1AF66]">
                 Contato
               </p>
@@ -739,7 +739,7 @@ function ReferenceFooter() {
           </div>
 
           <div className="min-w-0 px-3 text-left lg:px-4">
-            <div className="w-fit">
+            <div className="mx-auto w-fit lg:mx-0">
               <p className="text-center text-sm font-semibold uppercase tracking-[0.42em] text-[#D1AF66]">
                 Endereço
               </p>
@@ -799,7 +799,7 @@ export default function Home() {
           <div className="flex shrink-0 flex-col items-start">
             <a
               href="#inicio"
-              className="relative h-36 w-[17.5rem] shrink-0 overflow-hidden sm:h-44 sm:w-[22rem] lg:h-[15.75rem] lg:w-[450px]"
+              className="relative h-44 w-[22rem] max-w-full shrink-0 overflow-hidden sm:h-44 sm:w-[22rem] lg:h-[15.75rem] lg:w-[450px]"
             >
               <Image
                 src={brand.logo}
@@ -841,7 +841,7 @@ export default function Home() {
             href={whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-14 w-full items-center justify-center gap-2.5 rounded-full border border-[#D1AF66] bg-transparent px-6 py-3 text-sm font-bold uppercase tracking-[0.24em] text-[#D1AF66] transition hover:-translate-y-0.5 hover:bg-[#D1AF66]/12 sm:w-auto sm:px-8"
+            className="hidden min-h-14 w-full items-center justify-center gap-2.5 rounded-full border border-[#D1AF66] bg-transparent px-6 py-3 text-sm font-bold uppercase tracking-[0.24em] text-[#D1AF66] transition hover:-translate-y-0.5 hover:bg-[#D1AF66]/12 sm:inline-flex sm:w-auto sm:px-8"
           >
             <IconImage
               src={icons.whatsapp}
@@ -908,7 +908,7 @@ export default function Home() {
         complement="A marca une joias, perfumes e acessórios em uma experiência feminina premium, feita para quem entende que os detalhes também comunicam poder, delicadeza e bom gosto."
         image={brand.essence}
         imageAlt="Colar de pérolas em composição institucional da MV Jóias & Perfumes"
-        imageClass="scale-[1.45] lg:max-w-[800px] lg:scale-[1.65]"
+        imageClass="scale-[1.62] sm:scale-[1.45] lg:max-w-[800px] lg:scale-[1.65]"
       />
 
       <ReferenceLightSection
@@ -921,7 +921,7 @@ export default function Home() {
         imageAlt="Joias premium selecionadas pela MV Jóias & Perfumes"
         cta="Conhecer Joias"
         imageSide="left"
-        imageClass="lg:max-w-[900px] lg:scale-[1.1]"
+        imageClass="scale-[1.18] sm:scale-100 lg:max-w-[900px] lg:scale-[1.1]"
       />
 
       <ReferenceLightSection
@@ -934,7 +934,7 @@ export default function Home() {
         imageAlt="Perfumes premium selecionados pela MV Jóias & Perfumes"
         cta="Conhecer Perfumes"
         imageSide="right"
-        imageClass="lg:max-w-[880px] lg:scale-[1.09]"
+        imageClass="scale-[1.18] sm:scale-100 lg:max-w-[880px] lg:scale-[1.09]"
       />
 
       <ReferenceExperience />
@@ -951,7 +951,7 @@ export default function Home() {
         imageAlt="Relógios premium selecionados pela MV Jóias & Perfumes"
         cta="Conhecer Relógios"
         imageSide="left"
-        imageClass="lg:max-w-[860px] lg:scale-[1.08]"
+        imageClass="scale-[1.18] sm:scale-100 lg:max-w-[860px] lg:scale-[1.08]"
       />
 
       <ReferenceFounders />
