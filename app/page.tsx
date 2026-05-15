@@ -452,7 +452,7 @@ function ReferenceBags() {
             <FloatingProduct
               src={brand.bags}
               alt="Bolsas premium selecionadas pela MV Jóias & Perfumes"
-              className="aspect-[1.18/0.84] max-w-[1220px] scale-[1.24] sm:scale-[1.08] lg:translate-x-12 lg:scale-[1.42] xl:scale-[1.5]"
+              className="aspect-[1.18/0.84] max-w-[1220px] scale-[1.58] sm:scale-[1.08] lg:translate-x-12 lg:scale-[1.42] xl:scale-[1.5]"
             />
           </div>
         </div>
@@ -799,14 +799,14 @@ export default function Home() {
           <div className="flex shrink-0 flex-col items-start">
             <a
               href="#inicio"
-              className="relative h-44 w-[22rem] max-w-full shrink-0 overflow-hidden sm:h-44 sm:w-[22rem] lg:h-[15.75rem] lg:w-[450px]"
+              className="relative h-52 w-[24rem] max-w-[calc(100vw-2.5rem)] shrink-0 overflow-hidden sm:h-44 sm:w-[22rem] sm:max-w-full lg:h-[15.75rem] lg:w-[450px]"
             >
               <Image
                 src={brand.logo}
                 alt="MV Jóias & Perfumes"
                 fill
                 priority
-                className="object-contain object-left lg:-translate-x-16 lg:scale-[1.18]"
+                className="origin-left scale-[1.18] object-contain object-left sm:scale-100 lg:-translate-x-16 lg:scale-[1.18]"
                 sizes="(max-width: 640px) 320px, 450px"
               />
             </a>
@@ -908,7 +908,7 @@ export default function Home() {
         complement="A marca une joias, perfumes e acessórios em uma experiência feminina premium, feita para quem entende que os detalhes também comunicam poder, delicadeza e bom gosto."
         image={brand.essence}
         imageAlt="Colar de pérolas em composição institucional da MV Jóias & Perfumes"
-        imageClass="scale-[1.62] sm:scale-[1.45] lg:max-w-[800px] lg:scale-[1.65]"
+        imageClass="-translate-x-5 scale-[1.76] sm:translate-x-0 sm:scale-[1.45] lg:max-w-[800px] lg:scale-[1.65]"
       />
 
       <ReferenceLightSection
@@ -921,7 +921,7 @@ export default function Home() {
         imageAlt="Joias premium selecionadas pela MV Jóias & Perfumes"
         cta="Conhecer Joias"
         imageSide="left"
-        imageClass="scale-[1.18] sm:scale-100 lg:max-w-[900px] lg:scale-[1.1]"
+        imageClass="scale-[1.32] sm:scale-100 lg:max-w-[900px] lg:scale-[1.1]"
       />
 
       <ReferenceLightSection
@@ -934,7 +934,7 @@ export default function Home() {
         imageAlt="Perfumes premium selecionados pela MV Jóias & Perfumes"
         cta="Conhecer Perfumes"
         imageSide="right"
-        imageClass="scale-[1.18] sm:scale-100 lg:max-w-[880px] lg:scale-[1.09]"
+        imageClass="-translate-x-5 scale-[1.32] sm:translate-x-0 sm:scale-100 lg:max-w-[880px] lg:scale-[1.09]"
       />
 
       <ReferenceExperience />
@@ -951,7 +951,7 @@ export default function Home() {
         imageAlt="Relógios premium selecionados pela MV Jóias & Perfumes"
         cta="Conhecer Relógios"
         imageSide="left"
-        imageClass="scale-[1.18] sm:scale-100 lg:max-w-[860px] lg:scale-[1.08]"
+        imageClass="-translate-x-5 scale-[1.3] sm:translate-x-0 sm:scale-100 lg:max-w-[860px] lg:scale-[1.08]"
       />
 
       <ReferenceFounders />
