@@ -829,7 +829,7 @@ export default function Home() {
           <div className="flex shrink-0 flex-col items-start">
             <a
               href="#inicio"
-              className="relative h-60 w-[28rem] max-w-[calc(100vw-2rem)] shrink-0 overflow-hidden sm:h-44 sm:w-[22rem] sm:max-w-full lg:h-[15.75rem] lg:w-[450px]"
+              className="relative ml-0 mr-auto h-60 w-[28rem] max-w-[calc(100vw-2rem)] shrink-0 self-start overflow-hidden sm:h-44 sm:w-[22rem] sm:max-w-full lg:h-[15.75rem] lg:w-[450px]"
             >
               <Image
                 src={brand.logo}
