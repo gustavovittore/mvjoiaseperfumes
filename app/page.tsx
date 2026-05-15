@@ -836,7 +836,7 @@ export default function Home() {
                 alt="MV Jóias & Perfumes"
                 fill
                 priority
-                className="origin-left -translate-x-14 scale-[1.46] object-contain object-left sm:translate-x-0 sm:scale-100 lg:-translate-x-16 lg:scale-[1.18]"
+                className="origin-left -translate-x-[8.5rem] scale-[1.46] object-contain object-left sm:translate-x-0 sm:scale-100 lg:-translate-x-16 lg:scale-[1.18]"
                 sizes="(max-width: 640px) 320px, 450px"
               />
             </a>
